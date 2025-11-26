@@ -1,0 +1,274 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.exploding-button {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  font-size: 24px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.exploding-button:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.6);
+}
+
+.exploding-button:active {
+  transform: scale(0.95);
+}
+
+.exploding-button.explode {
+  animation: explodeButton 0.5s ease-out forwards;
+}
+
+@keyframes explodeButton {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.explosion {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: radial-gradient(circle, #ff6b6b 0%, #dc2626 100%);
+  border-radius: 50%;
+  animation: particleExplode 2s ease-out forwards;
+}
+
+.particle:nth-child(1) {
+  animation: particleExplode1 2s ease-out forwards;
+}
+
+.particle:nth-child(2) {
+  animation: particleExplode2 2s ease-out forwards;
+  animation-delay: 0.05s;
+}
+
+.particle:nth-child(3) {
+  animation: particleExplode3 2s ease-out forwards;
+  animation-delay: 0.1s;
+}
+
+.particle:nth-child(4) {
+  animation: particleExplode4 2s ease-out forwards;
+  animation-delay: 0.15s;
+}
+
+.particle:nth-child(5) {
+  animation: particleExplode5 2s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+.particle:nth-child(6) {
+  animation: particleExplode6 2s ease-out forwards;
+  animation-delay: 0.25s;
+}
+
+.particle:nth-child(7) {
+  animation: particleExplode7 2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.particle:nth-child(8) {
+  animation: particleExplode8 2s ease-out forwards;
+  animation-delay: 0.35s;
+}
+
+.particle:nth-child(9) {
+  animation: particleExplode9 2s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+.particle:nth-child(10) {
+  animation: particleExplode10 2s ease-out forwards;
+  animation-delay: 0.45s;
+}
+
+.particle:nth-child(11) {
+  animation: particleExplode11 2s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+.particle:nth-child(12) {
+  animation: particleExplode12 2s ease-out forwards;
+  animation-delay: 0.55s;
+}
+
+@keyframes particleExplode1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(150px, 0) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes particleExplode2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(130px, -75px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes particleExplode3 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(75px, -130px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes particleExplode4 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, -150px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes particleExplode5 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-75px, -130px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes particleExplode6 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-130px, -75px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes particleExplode7 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-150px, 0) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes particleExplode8 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-130px, 75px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes particleExplode9 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-75px, 130px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes particleExplode10 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0, 150px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes particleExplode11 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(75px, 130px) scale(0);
+    opacity: 0;
+  }
+}
+
+@keyframes particleExplode12 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(130px, 75px) scale(0);
+    opacity: 0;
+  }
+}
+
