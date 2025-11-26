@@ -9,7 +9,7 @@ function App() {
     // Reset after animation completes
     setTimeout(() => {
       setExploded(false)
-    }, 2000)
+    }, 2500)
   }
 
   return (
@@ -23,6 +23,18 @@ function App() {
         </button>
         {exploded && (
           <div className="explosion">
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
+            <div className="particle"></div>
             <div className="particle"></div>
             <div className="particle"></div>
             <div className="particle"></div>
