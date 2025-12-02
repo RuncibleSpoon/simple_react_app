@@ -9,7 +9,7 @@ function App() {
     // Reset after animation completes
     setTimeout(() => {
       setExploded(false)
-    }, 2500)
+    }, 2700)
   }
 
   return (
@@ -19,7 +19,7 @@ function App() {
           className={`exploding-button ${exploded ? 'explode' : ''}`}
           onClick={handleClick}
         >
-          DO NOT PUSH
+          DO NOT PUSH. EVER. OR ELSE!
         </button>
         {exploded && (
           <div className="explosion">
