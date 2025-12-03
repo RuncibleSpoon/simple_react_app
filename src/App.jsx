@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import micromatch from 'micromatch'
 
 function App() {
   const [exploded, setExploded] = useState(false)
@@ -9,7 +10,7 @@ function App() {
     // Reset after animation completes
     setTimeout(() => {
       setExploded(false)
-    }, 2700)
+    }, 2500)
   }
 
   return (
@@ -19,7 +20,7 @@ function App() {
           className={`exploding-button ${exploded ? 'explode' : ''}`}
           onClick={handleClick}
         >
-          DO NOT PUSH. EVER. OR ELSE!
+          DO NOT PUSH. NEVER, EVER. OR ELSE!
         </button>
         {exploded && (
           <div className="explosion">

@@ -2,11 +2,15 @@
 
 A React app featuring a red button that explodes when clicked!
 
-## Getting Started
+## Getting Started 
+
+1. Change directory to your application home: 
+
+`cd <path to repo>/exercises/04_mcp_server`
 
 1. Install dependencies:
 ```bash
-npm install
+npm install 
 ```
 
 2. Start the development server:
@@ -23,11 +27,5 @@ npm run dev
 - Smooth animations and transitions
 - Modern, responsive design
 
-## Build for Production
 
-```bash
-npm run build
-```
-
-The built files will be in the `dist` directory.
 
