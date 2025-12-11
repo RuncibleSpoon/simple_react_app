@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import micromatch from 'micromatch'
 
 function App() {
   const [exploded, setExploded] = useState(false)
