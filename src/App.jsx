@@ -9,7 +9,7 @@ function App() {
     // Reset after animation completes
     setTimeout(() => {
       setExploded(false)
-    }, 2500)
+    }, 10000)
   }
 
   return (
