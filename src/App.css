@@ -30,6 +30,46 @@
   letter-spacing: 0.05em;
 }
 
+.sorry-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.sorry-text {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #0a2e1a;
+}
+
+.sorry-button {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  padding: 10px 24px;
+  background: #0a2e1a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.sorry-button:hover {
+  background: #134e2a;
+  transform: scale(1.02);
+}
+
+.forgiven-text {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #0a2e1a;
+}
+
 .exploding-button {
   background-color: #8b0000;
   color: #ff0000;
@@ -63,6 +103,16 @@
 
 .exploding-button:active {
   transform: scale(0.95);
+}
+
+.exploding-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.exploding-button:disabled:hover {
+  transform: none;
 }
 
 .exploding-button.explode {

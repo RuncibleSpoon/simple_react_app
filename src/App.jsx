@@ -3,13 +3,25 @@ import './App.css'
 
 function App() {
   const [exploded, setExploded] = useState(false)
+  const [awaitingApology, setAwaitingApology] = useState(false)
+  const [showForgiven, setShowForgiven] = useState(false)
+
+  const isDisabled = exploded || awaitingApology || showForgiven
 
   const handleClick = () => {
     setExploded(true)
-    // Reset after animation completes
     setTimeout(() => {
       setExploded(false)
+      setAwaitingApology(true)
     }, 5000)
+  }
+
+  const handleSorry = () => {
+    setAwaitingApology(false)
+    setShowForgiven(true)
+    setTimeout(() => {
+      setShowForgiven(false)
+    }, 1500)
   }
 
   return (
@@ -19,9 +31,21 @@ function App() {
         <button
           className={`exploding-button ${exploded ? 'explode' : ''}`}
           onClick={handleClick}
+          disabled={isDisabled}
         >
           DO NOT PUSH. NEVER, EVER. OR ELSE!
         </button>
+        {awaitingApology && (
+          <div className="sorry-section">
+            <p className="sorry-text">Are you sorry</p>
+            <button type="button" className="sorry-button" onClick={handleSorry}>
+              Yes, I'm very sorry
+            </button>
+          </div>
+        )}
+        {showForgiven && (
+          <p className="forgiven-text">ok, then</p>
+        )}
         {exploded && (
           <div className="explosion">
             <div className="particle"></div>
