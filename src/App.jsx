@@ -15,6 +15,7 @@ function App() {
   return (
     <div className="app">
       <div className="container">
+        <h1 className="demo-title">Vibe Code Demo</h1>
         <button
           className={`exploding-button ${exploded ? 'explode' : ''}`}
           onClick={handleClick}
